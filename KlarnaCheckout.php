@@ -6,6 +6,7 @@ $result = $db->query("SELECT * FROM tuspe_cart_products WHERE cart_id = '{$cart_
 if($result->num_rows > 0){
 
 	if($cart_data["coupon"]["percent"]) $coupon = $cart_data["coupon"]["percent"]; else $coupon = 0;
+
     $products = array();
     $order_total = $cart_data["checkout"]["shipping_total"] * 100;
     $order_vat = $cart_data["checkout"]["shipping_vat"] * 100;
